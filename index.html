@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>С Днём Рождения, Яна 🌸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,500&family=Marck+Script&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- floating petals canvas layer -->
+<div class="petals" id="petals" aria-hidden="true"></div>
+
+<!-- ===================== SECTION 1 — HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">сегодня особенный день</p>
+    <h1 class="hero-title">
+      <span class="line">С Днём</span>
+      <span class="line">Рождения</span>
+    </h1>
+    <p class="hero-name">Яна</p>
+    <div class="hero-divider"><span></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-8-4.7-10.5-9C-0.3 7.9 2 3 6.5 3 9 3 11 4.6 12 6.6 13 4.6 15 3 17.5 3 22 3 24.3 7.9 22.5 12 20 16.3 12 21 12 21z" fill="#e8a4b0"/></svg><span></span></div>
+    <p class="hero-sub">для самой яркой, тёплой и любимой</p>
+
+    <button class="scroll-cue" id="scrollCue" aria-label="Прокрутить вниз">
+      <span>пролистай нашу историю</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 4v15M12 19l-6-6M12 19l6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+  <div class="hero-bottom-fade"></div>
+</section>
+
+<!-- ===================== SECTION 2 — ALBUM ===================== -->
+<section class="album-section" id="album">
+  <p class="section-eyebrow">наш альбом</p>
+  <h2 class="section-title">Моменты, которые я люблю</h2>
+  <p class="section-text">Маленькое окошко в нашу историю — листай дальше ✨</p>
+
+  <div class="album-frame">
+    <div class="album-window" id="albumWindow">
+      <div class="album-track" id="albumTrack">
+        <!-- slides injected by JS -->
+      </div>
+
+      <button class="album-arrow album-arrow--left" id="prevBtn" aria-label="Предыдущее фото">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="album-arrow album-arrow--right" id="nextBtn" aria-label="Следующее фото">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="album-spine"></div>
+    <div class="album-corner album-corner--tl"></div>
+    <div class="album-corner album-corner--br"></div>
+  </div>
+
+  <div class="album-dots" id="albumDots"></div>
+  <p class="album-counter"><span id="albumCurrent">1</span> / <span id="albumTotal">8</span></p>
+</section>
+
+<!-- ===================== SECTION 3 — WISH ===================== -->
+<section class="wish-section" id="wish">
+  <div class="wish-card">
+    <div class="wish-quote">&ldquo;</div>
+    <p class="wish-text" id="wishText"></p>
+    <div class="wish-sign">
+      <span class="wish-sign-line"></span>
+      <span class="wish-sign-text">твой</span>
+    </div>
+  </div>
+  <div class="wish-hearts" aria-hidden="true">
+    <span>💗</span><span>🌷</span><span>✨</span><span>💗</span>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>сделано с любовью, для самого дорогого человека 🌸</p>
+</footer>
+
+<!-- ===================== MUSIC (hidden YouTube player) ===================== -->
+<div id="ytPlayer" class="yt-hidden"></div>
+<button class="music-pill" id="musicToggle" aria-label="Звук">
+  <svg id="iconMuted" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M11 5L6 9H2v6h4l5 4V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 9l6 6M22 9l-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  <svg id="iconOn" width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:none"><path d="M11 5L6 9H2v6h4l5 4V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M15.5 8.5a5 5 0 010 7M18.5 6a9 9 0 010 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  <span id="musicLabel">включить звук</span>
+</button>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="script.js"></script>
+</body>
+</html>
